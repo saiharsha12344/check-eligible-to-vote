@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Checking</title>
+</head>
+<body style="margin: 0;">
+    <style>
+        #age{
+            padding: 10px 50px;
+        }
+        .btn{
+            padding: 8px 36px;
+            background-color: cornflowerblue;
+            margin-top: 20px;
+            border-color: None ;
+
+        }
+    </style>
+    <header>
+        <nav style="background-color: cornflowerblue; padding: 10px 0px;">
+            <h1 style="text-align: center;">Eligible to Vote or Not</h1>
+        </nav>
+    </header>
+    
+    <center>
+        <div style="margin-top: 40px;">
+            <label for="" style="text-align: start;">Enter Your Age:</label>
+            <input type="text" id="age"  placeholder="Eg:13,18">
+        </div>
+        <div>
+            <button onclick="Age()" class="btn" id="button">Let's Check</button>
+        </div>
+
+        <h1 id="result"></h1>
+    </center>
+
+    <script>
+        function Age(){
+        const age=parseFloat(document.getElementById('age').value);
+        let result='';
+        if(age>18){
+            result= 'Eligible To Vote';
+        }else{
+            result='Not Eligible To Vote';
+        }
+    document.getElementById('result').textContent=`You are ${result}`;
+    }
+    </script>
+</body>
+</html>
