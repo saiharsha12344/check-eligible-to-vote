@@ -40,12 +40,12 @@
         function Age(){
         const age=parseFloat(document.getElementById('age').value);
         let result='';
-        if(age<0 && isNaN (age){
+        if(age<0 && isNaN(age){
             result= 'You Entered A Negative Age or A String ,Please Enter A Valid Age...';
         }else if (age>18){
-            result=' Eligible To Vote';
+            result='Eligible To Vote';
         }else{
-            result-'Not Eligible To Vote'
+            result='Not Eligible To Vote';
         }
     document.getElementById('result').textContent=`You are ${result}`;
     }
